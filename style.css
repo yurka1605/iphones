@@ -1,0 +1,340 @@
+@import './fonts/stylesheet.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 18px;
+    background-image: url(./img/top-bg.png);
+    background: url(./img/top-bg.png) no-repeat, 
+    url(./img/bottom-bg.png) no-repeat;
+    background-size: 55% auto, 80% auto;
+    background-position: right top, left center;
+}
+.header {
+    padding: 60px 0;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 32px;
+}
+.banner .container {
+    display: flex;
+    justify-content: center;
+}
+.banner__info {
+    padding-right: 55px;
+    text-align: right;
+    padding-top: 120px;
+}
+.banner__info h2 {
+    font-size: 60px;
+    line-height: 1;
+}
+.banner__info h2 b {
+    color: #185734;
+}
+.banner__sale {
+    display: inline-block;
+    width: 100%;
+    font-size: 26px;
+    color: #185734;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.iphone__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+    font-size: 32px;
+    font-weight: bold;
+    width: 260px;
+    height: 73px;
+    background-color: #f20a36;
+    border-radius: 36px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.banner__img {
+    width: 550px;
+    height: auto;
+}
+
+/* Blocks Main */
+.main .container {
+    margin-top: -180px;
+    box-shadow: 6px 7px 19px 2px rgba(212,213,213,1);
+}
+.main__block {
+    position: relative;
+    display: flex;
+}
+.buy,
+.new,
+.products,
+.trade-in {
+    width: 50%;
+}
+.trade-in {
+    background: url('./img/trade-in-bg.png') no-repeat;
+    background-size: cover;
+    padding-left: 75px;
+    padding-top: 250px;
+    padding-bottom: 150px;
+    color: #ffffff;
+    transition: all 0.3s linear;
+}
+.trade-in:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+.trade-in h3 {
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+.trade-in ul {
+    font-size: 32px;
+}
+.trade-in ul h4 {
+    font-weight: 500;
+}
+.trade-in li {
+    margin-left: 20px;
+    font-weight: 500;
+}
+.products {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.products__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 50%;
+    width: 50%;
+    padding-bottom: 60px;
+    background-color: #efefef;
+    transition: all 0.3s linear;
+}
+.products__item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+.products__item h4 {
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.products__item:first-child {
+    background-color: #3d655d;
+    background-image: url(./img/smart-bg.png);
+}
+.products__item:last-child {
+    background-color: #f4d6bc;
+    background-image: url(./img/smart-bg.png);
+}
+.products__item:first-child h4 {
+    color: #ffffff;
+}
+.new__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+    transition: all 0.3s linear;
+}
+.new__item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+.new__item-info {
+    font-size: 42px;
+    font-weight: bold;
+    margin-left: 70px;
+}
+.new__item:first-child {
+    background-color: #efefef;
+}
+.new__item:last-child {
+    background-color: #213732;
+    color: #ffffff;
+}
+.new__item:first-child .new__item-info {
+    margin-left: 0;
+    margin-right: 85px;
+}
+.buy {
+    padding: 70px 0 0 70px;
+    color: #ffffff;
+    background-color: #8399a7;
+    transition: all 0.3s linear;
+}
+.buy:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+.buy__header {
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+.buy ul li {
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.iphone {
+    display: flex;
+    padding: 150px 0;
+}
+.iphone .container {
+    display: flex;
+    justify-content: center;
+}
+.iphone__info {
+    width: 50%;
+}
+.iphone__img {
+    text-align: right;
+    width: 50%;
+    padding-right: 150px;
+}
+.iphone__name,
+.iphone__price {
+    margin-left: 33px;
+    position: relative;
+    font-size: 55px;
+}
+.iphone__price.delete::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 8px;
+    background-color: #f20a36;
+}
+
+.iphone__har {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iphone__info .iphone__har_item {
+    min-width: calc(50% - 50px);
+    margin-bottom: 80px;
+}
+.iphone__info  .iphone__btn {
+    display: flex;
+    margin: 0 auto;
+}
+.iphone__har_item {
+    display: flex;
+    align-items: center;
+}
+.iphone__har_info {
+    padding-left: 34px;
+    font-size: 40px;
+}
+.iphone__har_name {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgba(131, 153, 167, 255);
+    margin-bottom: 10px;
+}
+.iphone__har_val {
+    font-weight: bold;
+}
+.iphone__har_item img {
+    width: 90px;
+    height: 72px;
+}
+.footer {
+    padding: 100px 0;
+    background: url(./img/footer-bg.png) no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.footer__contacts {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+.footer__bottom {
+    font-size: 40px;
+    font-weight: 500;
+}
+.footer__bottom a {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff!important;
+    text-decoration: none!important;
+}
+
+.container {
+    width: 1640px;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+@media (max-width: 576px) {
+    .container {
+        width: 300px;
+        max-width: 300px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1440px) {
+    .container {
+        width: 1300px;
+        max-width: 1300px;
+    }
+}
+@media (min-width: 1700px) {
+    .container {
+        width: 1640px;
+        max-width: 1640px;
+    }
+}
